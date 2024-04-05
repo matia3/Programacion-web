@@ -1,0 +1,50 @@
+body {
+    padding-top: 50px;
+}
+
+.btn-purple {
+    background-color: coral;
+    color: white;
+}
+.btn-outline{
+    color: white;
+    border-color: transparent;
+    
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: coral;
+    color: black;
+    text-align: center;
+}
+/* Imagenes responsivas */
+.carousel-item img {
+    
+    object-fit: scale-down;
+    width: 100%;
+    height: 50vh;
+}
+
+.navbar {
+    background-color: coral;
+}
+.dropdown-menu {
+    background-color: white;
+    
+
+}
+.jumbotron {
+margin-top: 20px;
+color: black; 
+
+}
+.carousel {
+margin-top: 0; /* Margen */
+}
+
+.card{
+    margin-top: 20px;
+}

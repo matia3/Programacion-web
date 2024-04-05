@@ -13,14 +13,13 @@
             padding-top: 50px;
         }
         
-        .btn-purple {
+        .btn-coral {
             background-color: coral;
             color: white;
         }
-        .btn-outline{
+        .btn-outline {
+            background-color: coral;
             color: white;
-            border-color: transparent;
-            
         }
         .footer {
             position: fixed;
@@ -48,14 +47,15 @@
 
         }
         .jumbotron {
-        margin-top: 20px;
-        color: black; 
+            margin-top: 20px;
+            color: black; 
         
-    }
-    .carousel {
-    margin-top: 0; /* Margen */
-    }
-    
+        }
+        .carousel {
+            margin-top: 0; /* Margen */
+            
+        }
+        
     
     
     
@@ -78,7 +78,7 @@
             </form>
                 <div class="btn-group" role="group">
                     <div class="dropdown">
-                        <button class="btn btn-purple dropdown-toggle" type="button" id="dropdownServicios" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-coral dropdown-toggle" type="button" id="dropdownServicios" data-bs-toggle="dropdown" aria-expanded="false">
                             Servicios
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownServicios">
@@ -87,7 +87,7 @@
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn btn-purple dropdown-toggle" type="button" id="dropdownHardware" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-coral dropdown-toggle" type="button" id="dropdownHardware" data-bs-toggle="dropdown" aria-expanded="false">
                             Hardware
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownHardware">
@@ -101,12 +101,14 @@
                             <li><a class="dropdown-item" href="#">Refrigeracion</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-purple" href="#">PC Escritorio</a>
-                    <a class="btn btn-purple" href="#">Notebooks</a>
-                    <a class="btn btn-purple" href="#">Nosotros</a>
-                    <a class="btn btn-purple" href="#">Contacto</a>
-                    <a class="btn btn-purple" href="#">
+                    <a class="btn btn-coral" href="#">PC Escritorio</a>
+                    <a class="btn btn-coral" href="#">Notebooks</a>
+                    <a class="btn btn-coral" href="#">Nosotros</a>
+                    <a class="btn btn-coral" href="#">Contacto</a>
+                    <a class="btn btn-coral" href="#">
                         <img src="C:\Users\matia\Desktop\HTML\img\carrito.png" alt="Carrito Icon" style="width: 30px; height: 30px;">
+                    <a class="btn btn-purple" href="#">
+                            <img src="C:\Users\matia\Desktop\HTML\img\usauaRIO.png" alt="Carrito Icon" style="width: 30px; height: 30px;">
                         
                     </a>
                 </div>
@@ -122,8 +124,9 @@
     </div>
 
     <!-- Carrusel -->
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-inner">
+            
             <div class="carousel-item active">
                 <img src="C:\Users\matia\Desktop\HTML\img\pcesc.png" class="d-block w-100" alt="Image 1">
             </div>

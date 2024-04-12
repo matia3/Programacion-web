@@ -1,62 +1,94 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="Inicio.html">Smokey Workshop</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a href="Inicio.html" class="navbar-brand">Smokey's Workshop</a>
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSmokey">
-
-            <div class="btn-group" role="group">
-                <div class="dropdown">
-                    <button class="btn btn-coral dropdown-toggle" type="button" id="dropdownServicios" data-bs-toggle="dropdown" aria-expanded="false">
-                        Servicios
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownServicios">
-                        <li><a class="dropdown-item" href="#">Armado</a></li>
-                        <li><a class="dropdown-item" href="#">Mantención</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown">
-                    <button class="btn btn-coral dropdown-toggle" type="button" id="dropdownHardware" data-bs-toggle="dropdown" aria-expanded="false">
-                        Hardware
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownHardware">
-                        <li><a class="dropdown-item" href="procesadores.html">Procesadores</a></li>
-                        <li><a class="dropdown-item" href="#">Placa Madre</a></li>
-                        <li><a class="dropdown-item" href="#">Tarjetas Graficas</a></li>
-                        <li><a class="dropdown-item" href="#">Ram</a></li>
-                        <li><a class="dropdown-item" href="#">Fuentes de Poder</a></li>
-                        <li><a class="dropdown-item" href="#">Almacenamiento</a></li>
-                        <li><a class="dropdown-item" href="#">Gabinetes</a></li>
-                        <li><a class="dropdown-item" href="#">Refrigeracion</a></li>
-                    </ul>
-                </div>
-                <a class="btn btn-coral" href="#">PC Escritorio</a>
-                <a class="btn btn-coral" href="Notebooks.html">Notebooks</a>
-                <a class="btn btn-coral" href="#">Nosotros</a>
-                <a class="btn btn-coral" href="#">Contacto</a>
-                
-            </div>
-        <!-- Buscador -->
-        <form class="d-flex ms-auto">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-coral" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-        <!-- Boton trigger modal -->
-        <button type="button" class="btn btn-coral" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i class="fa-solid fa-user"></i>
         </button>
-        <a class="btn btn-coral" href="#">
-            <i class="fa-solid fa-cart-shopping"></i>
-            
-        </a>
+        <!--Side Bar-->
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <!--Side Bar Header-->
+            <div class="offcanvas-header text-white border-bottom">
+                <h5 class="offcanvas-title text-dark" id="offcanvasNavbarLabel"><b> Smokey's Workshop</b></h5>
+                <button type="button" class="btn-close btn-close-white shadow-none" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
+            </div>
+            <!--Side Bar Body-->
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3  ">
+                    <li class="nav-item mx-2 my-1">
+                        <div class="dropdown">
+                            <button class="btn btn-coral dropdown-toggle" type="button" id="dropdownServicios" data-bs-toggle="dropdown" aria-expanded="false">
+                                Servicios
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownServicios">
+                                <li><a class="dropdown-item" href="#">Armado</a></li>
+                                <li><a class="dropdown-item" href="#">Mantención</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2 my-1">
+                        <div class="dropdown">
+                            <button class="btn btn-coral dropdown-toggle" type="button" id="dropdownHardware" data-bs-toggle="dropdown" aria-expanded="false">
+                                Hardware
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownHardware">
+                                <li><a class="dropdown-item" href="procesadores.html">Procesadores</a></li>
+                                <li><a class="dropdown-item" href="#">Placa Madre</a></li>
+                                <li><a class="dropdown-item" href="#">Tarjetas Graficas</a></li>
+                                <li><a class="dropdown-item" href="#">Ram</a></li>
+                                <li><a class="dropdown-item" href="#">Fuentes de Poder</a></li>
+                                <li><a class="dropdown-item" href="#">Almacenamiento</a></li>
+                                <li><a class="dropdown-item" href="#">Gabinetes</a></li>
+                                <li><a class="dropdown-item" href="#">Refrigeracion</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2 my-1 ">
+                        <button type="button" class="btn btn-coral">
+                        <a class="nav-link text-white" href="">PC</a>
+                    </button>
+                    </li>
+                    <li class="nav-item mx-2 my-1 ">
+                        <button type="button" class="btn btn-coral">
+                        <a class="nav-link text-white" href="Notebooks.html">Notebooks</a>
+                        </button>
+                    </li>
+                    <li class="nav-item mx-2 my-1">
+                        <button type="button" class="btn btn-coral">
+                        <a class="nav-link text-white" href="">Nosotros</a>
+                        </button>
+                    </li>
+                    <li class="nav-item mx-2 my-1">
+                        <button type="button" class="btn btn-coral">
+                        <a class="nav-link text-white" href="">Contacto</a>
+                        </button>
+                    </li>
+                    <li class="nav-item mx-2 my-1">
+                        <form class="d-flex ms-auto">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-coral" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </li>
+                    <li class="nav-item mx-2 my-1">
+    
+                        <button type="button" class="btn btn-coral" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Iniciar Sesion <i class="fa-solid fa-user"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item mx-2 my-1">
+                        <button type="button" class="btn btn-coral">
+                            Carrito <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
     </div>
-</div>
-
 </nav>
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="inicio sesion" aria-hidden="true">

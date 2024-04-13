@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-        <a href="Inicio.html" class="navbar-brand">Smokey's Workshop</a>
+        <a href="Inicio.html" class="navbar-brand ">Smokey's Workshop</a>
         <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,8 @@
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3  ">
                     <li class="nav-item mx-2 my-1">
                         <div class="dropdown">
-                            <button class="btn btn-coral dropdown-toggle" type="button" id="dropdownServicios" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-coral dropdown-toggle" type="button" id="dropdownServicios"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Servicios
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownServicios">
@@ -31,7 +32,8 @@
                     </li>
                     <li class="nav-item mx-2 my-1">
                         <div class="dropdown">
-                            <button class="btn btn-coral dropdown-toggle" type="button" id="dropdownHardware" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-coral dropdown-toggle" type="button" id="dropdownHardware"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Hardware
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownHardware">
@@ -48,33 +50,35 @@
                     </li>
                     <li class="nav-item mx-2 my-1 ">
                         <button type="button" class="btn btn-coral">
-                        <a class="nav-link text-white" href="">PC</a>
-                    </button>
+                            <a class="nav-link text-white" href="">PC</a>
+                        </button>
                     </li>
                     <li class="nav-item mx-2 my-1 ">
                         <button type="button" class="btn btn-coral">
-                        <a class="nav-link text-white" href="Notebooks.html">Notebooks</a>
+                            <a class="nav-link text-white" href="Notebooks.html">Notebooks</a>
                         </button>
                     </li>
                     <li class="nav-item mx-2 my-1">
                         <button type="button" class="btn btn-coral">
-                        <a class="nav-link text-white" href="">Nosotros</a>
+                            <a class="nav-link text-white" href="Nosotros.html">Nosotros</a>
                         </button>
                     </li>
                     <li class="nav-item mx-2 my-1">
                         <button type="button" class="btn btn-coral">
-                        <a class="nav-link text-white" href="">Contacto</a>
+                            <a class="nav-link text-white" href="">Contacto</a>
                         </button>
                     </li>
                     <li class="nav-item mx-2 my-1">
                         <form class="d-flex ms-auto">
                             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                            <button class="btn btn-coral" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button class="btn btn-coral" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
                         </form>
                     </li>
                     <li class="nav-item mx-2 my-1">
-    
-                        <button type="button" class="btn btn-coral" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+                        <button type="button" class="btn btn-coral" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
                             Iniciar Sesion <i class="fa-solid fa-user"></i>
                         </button>
                     </li>
@@ -92,38 +96,39 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="inicio sesion" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-  <div class="modal-header">
-    <h5 class="modal-title" id="inicio sesion">Inicia sesión</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-  </div>
-  <div class="modal-body">
-    <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" placeholder="juanperez@gmail.com" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text"></div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="inicio sesion">Inicia sesión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" placeholder="juanperez@gmail.com"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                    </div>
+                    <button type="submit" class="btn btn-coral2">Inicia sesión</button>
+                    <br>
+
+                    <div id="emailHelp" class="form-text">¿No estás registrado/a?</div>
+
+                    <button type="submit" class="btn btn-coral2">Registrarme</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-        </div>
-        <button type="submit" class="btn btn-coral2">Inicia sesión</button>
-        <br>
-        
-        <div id="emailHelp" class="form-text">¿No estás registrado/a?</div>
-        
-        <button type="submit" class="btn btn-coral2">Registrarme</button>
-      </form>
-  </div>
-  <div class="modal-footer">
-    
-  </div>
+    </div>
 </div>
-</div>
-</div>  

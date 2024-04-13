@@ -1,1 +1,0 @@
-aqui colocar todas las imagenes que tienes en tu computador y ahi las conectas en el html.

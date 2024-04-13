@@ -74,13 +74,13 @@ body {
     color: whitesmoke;
 }
 .card{
-    
+    background-color: rgb(216, 0, 143);
+    height: 550px;
     width: 320px;
     padding: 20px;
     border: 1px solid #c9c9c9;
     border-radius: 7px; 
     transition: transform 0.5s ease; 
-    
     margin-top: 20px;
 }
 .card:hover {
@@ -93,7 +93,6 @@ body {
    font-family: sans-serif;
     margin-top: 20px;
     color: rgb(255, 144, 237);
-    
 
 }
 .carousel {
@@ -113,3 +112,19 @@ body {
     
 
 }
+
+.titulo{
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+.titulo2{
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+    1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+
+@media only screen and (max-width: 992px) {
+    
+  }
+  

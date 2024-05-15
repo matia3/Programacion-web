@@ -1,0 +1,82 @@
+[
+  {
+    "id_usuario": 1,
+    "usuario": "Zonda Zarb",
+    "fecha_compra": "3/18/2024",
+    "fecha_entrega": "11/8/2023",
+    "lista_productos": "SSD 512GB",
+    "precio": 66203
+  },
+  {
+    "id_usuario": 2,
+    "usuario": "Siward Stiven",
+    "fecha_compra": "12/12/2023",
+    "fecha_entrega": "30/9/2023",
+    "lista_productos": "SSD 512GB",
+    "precio": 112250
+  },
+  {
+    "id_usuario": 3,
+    "usuario": "Opaline Edds",
+    "fecha_compra": "9/2/2023",
+    "fecha_entrega": "1/12/2023",
+    "lista_productos": "SSD 512GB",
+    "precio": 67221
+  },
+  {
+    "id_usuario": 4,
+    "usuario": "Didi Mollett",
+    "fecha_compra": "4/30/2024",
+    "fecha_entrega": "29/8/2023",
+    "lista_productos": "Kingston Ram 16GB",
+    "precio": 184403
+  },
+  {
+    "id_usuario": 5,
+    "usuario": "Barbie Polk",
+    "fecha_compra": "12/24/2023",
+    "fecha_entrega": "13/8/2023",
+    "lista_productos": "GTX 1080 ti",
+    "precio": 202374
+  },
+  {
+    "id_usuario": 6,
+    "usuario": "Gussie Lang",
+    "fecha_compra": "12/18/2023",
+    "fecha_entrega": "15/10/2023",
+    "lista_productos": "SSD 512GB",
+    "precio": 120366
+  },
+  {
+    "id_usuario": 7,
+    "usuario": "Homere Sydney",
+    "fecha_compra": "9/22/2023",
+    "fecha_entrega": "1/4/2024",
+    "lista_productos": "GTX 1080 ti",
+    "precio": 235906
+  },
+  {
+    "id_usuario": 8,
+    "usuario": "Abram Duffitt",
+    "fecha_compra": "3/10/2024",
+    "fecha_entrega": "23/1/2024",
+    "lista_productos": "RTX 1050 ti",
+    "precio": 221385
+  },
+  {
+    "id_usuario": 9,
+    "usuario": "Auberta Venditto",
+    "fecha_compra": "11/1/2023",
+    "fecha_entrega": "29/5/2023",
+    "lista_productos": "GTX 1080 ti",
+    "precio": 230854
+  },
+  {
+    "id_usuario": 10,
+    "usuario": "Manuel Smale",
+    "fecha_compra": "5/4/2024",
+    "fecha_entrega": "17/11/2023",
+    "lista_productos": "GTX 1080 ti",
+    "precio": 67802
+  }
+]

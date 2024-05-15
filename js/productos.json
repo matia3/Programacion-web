@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Procesador Intel® Core™ i3-12100 Alder Lake, LGA1700, 4-Core / 8-Threads, 3.3/4.3 GHz",
+        "precio": "$144.990",
+        "imagen": "/img/i3.png",
+        "categoria": "procesadores"
+    },
+    {
+        "nombre": "Procesador Intel® Core™ i5-12400F, 2.5GHz, Socket LGA 1700, 6-Core / 12-Threads, Sin Gráficos",
+        "precio": "$229.560",
+        "imagen": "/img/i5.png",
+        "categoria": "procesadores"
+    },
+    {
+        "nombre": "Procesador Intel® Core™ i7-12700K, 12º Gen 3.6GHz (Hasta 5.0GHz), Socket LGA1700, con Gráficas",
+        "precio": "$402.320",
+        "imagen": "/img/i7.png",
+        "categoria": "procesadores"
+    },
+    {
+        "nombre": "Tarjeta de Video MSI Nvidia® GeForce® RTX™ 4060 VENTUS 2X Black OC, 8GB GDDR6, 128-bit, PCI-e 4.0",
+        "precio": "$369.990",
+        "imagen": "/img/rtx4060.png",
+        "categoria": "tarjeta de videos"
+    }    
+]

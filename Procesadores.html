@@ -28,73 +28,8 @@
     </div>
     <!-- Contenido en tarjetas-->
     <div class="container">
-        <div class="row">
-            <!-- Tarjeta 1 -->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
-                <button class="card" role="button" tabindex="0">
-                    <img src="img/i3.png" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Procesador Intel® Core™ i3-12100 Alder Lake, LGA1700, 4-Core / 8-Threads, 3.3/4.3 GHz</h5>
-                        <p class="card-text">$144.990</p>
-                        <a href="#" class="btn btn-coral">Añadir al carrito</a>                        
-                    </div>
-                </button>
-            </div>
-            <!--Tarjeta 2-->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
-                <button class="card" role="button" tabindex="0">
-                    <img src="img/i5.png" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Procesador Intel® Core™ i5-12400F, 2.5GHz, Socket LGA 1700, 6-Core / 12-Threads, Sin Gráficos</h5>
-                        <p class="card-text">$229.560</p>
-                        <a href="#" class="btn btn-coral">Añadir al carrito</a>
-                    </div>
-                </button>
-            </div>
-            <!--Tarjeta 3-->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
-                <button class="card" role="button" tabindex="0">
-                    <img src="img/i7.png" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Procesador Intel® Core™ i7-12700K, 12º Gen 3.6GHz (Hasta 5.0GHz), Socket LGA1700, con Gráficas</h5>
-                        <p class="card-text">$402.320</p>
-                        <a href="#" class="btn btn-coral">Añadir al carrito</a>
-                    </div>
-                </button>
-            </div>
-            <!--Tarjeta 4-->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
-                <button class="card" role="button" tabindex="0">
-                    <img src="img/i7.png" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Procesador Intel® Core™ i7-12700K, 12º Gen 3.6GHz (Hasta 5.0GHz), Socket LGA1700, con Gráficas</h5>
-                        <p class="card-text">$402.320</p>
-                        <a href="#" class="btn btn-coral">Añadir al carrito</a>
-                    </div>
-                </button>
-            </div>
-            <!--Tarjeta 5-->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
-                <button class="card" role="button" tabindex="0">
-                    <img src="img/i7.png" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Procesador Intel® Core™ i7-12700K, 12º Gen 3.6GHz (Hasta 5.0GHz), Socket LGA1700, con Gráficas</h5>
-                        <p class="card-text">$402.320</p>
-                        <a href="#" class="btn btn-coral">Añadir al carrito</a>
-                    </div>
-                </button>
-            </div>
-            <!--Tarjeta 6-->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
-                <button class="card" role="button" tabindex="0">
-                    <img src="img/i7.png" class="card-img-top" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Procesador Intel® Core™ i7-12700K, 12º Gen 3.6GHz (Hasta 5.0GHz), Socket LGA1700, con Gráficas</h5>
-                        <p class="card-text">$402.320</p>
-                        <a href="#" class="btn btn-coral">Añadir al carrito</a>
-                    </div>
-                </button>
-            </div>        
+        <div class="row" id="data-output">
+            
     </div>
  </div>
     
@@ -107,7 +42,10 @@
 
     
 
-    
+    <script src="/js/listar_productos.js"></script>
+    <script>
+     window.onload = listarProductos("procesadores");
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

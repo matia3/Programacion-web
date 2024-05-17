@@ -4,21 +4,25 @@
     margin: auto;
     margin-top: 5px;
     background-color: white;
-    transition: none; 
+    transition: none;
     margin-top: 30px;
-  }
-  p{
-    color: red;
-  }
-.card:hover {
-    transform: none; 
-    box-shadow: none; 
 }
-  @media only screen and (max-width: 991px) {
+
+p {
+    color: red;
+}
+
+.card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 991px) {
     .card {
-      width: 96vw;
+        width: 96vw;
     }
+
     .form-control {
-      width: 90%;
+        width: 90%;
     }
-  }
+}

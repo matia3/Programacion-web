@@ -14,12 +14,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Conexion a CSS-->
     <link rel="stylesheet" href="style.css">
-
-
-
 </head>
 
 <body>
+    <!-- Navbar -->
     <div id="navbar">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
@@ -29,31 +27,25 @@
         </script>
     </div>
 
-
-
-
-
-    <!-- Jumbotron -->
-    <div class="jumbotron">
-        <div class="container">
-            <b>
-                <h1 class="titulo2 display-6 pt-2">Registrarse</h1>
-            </b>
-        </div>
-    </div>
-    <div class="container"> 
-    <form action="">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label titulo">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-    </form>
+    <!-- Contenido del formulario de registro -->
+    <div class="container">
+        <form id="registroForm" onsubmit="return validarRegistro()">
+            <div class="mb-3">
+                <label for="email" class="form-label titulo">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label titulo">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 
-
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="scripts.js"></script>
 </body>
 
 </html>

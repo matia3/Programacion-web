@@ -1,0 +1,26 @@
+{% extends "productos/base.html" %}
+{% block title %} {% endblock %}
+{% block content %}
+{% load static %}
+<div class="container pt-5">
+    <h1 class="titulo pt-5 text-dark">{{ categoria }}</h1>
+</div>
+
+<!-- Contenido en tarjetas -->
+<div class="container">
+    <div class="row">
+        {% for producto in productos %}
+        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+            <button class="card" role="button" tabindex="0">
+                <img src="{{ producto.imagen.url }}" class="card-img-top" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ producto.nombre }}</h5>
+                    <p class="card-text">${{ producto.precio }}</p>
+                    <a href="#" class="btn btn-coral">Añadir al carrito</a>
+                </div>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

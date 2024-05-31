@@ -1,0 +1,28 @@
+.card {
+    height: auto;
+    width: 55vw;
+    margin: auto;
+    margin-top: 5px;
+    background-color: white;
+    transition: none;
+    margin-top: 30px;
+}
+
+p {
+    color: red;
+}
+
+.card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 991px) {
+    .card {
+        width: 96vw;
+    }
+
+    .form-control {
+        width: 90%;
+    }
+}

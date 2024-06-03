@@ -19,3 +19,13 @@ def listar_productos(request, categoria):
 def agregar_productos(request):
     context={}
     return render(request, 'agregarproductos.html', context)
+
+def crud(request):
+    var_productos = productos.objects.all()
+    context = {'productos': var_productos}
+    return render(request,'crud/productos_list.html', context)
+
+def productosAdd(request):
+    if request.method is not "post":
+        context={}
+        return render(request,'crud/productos_add.html',context)

@@ -1,0 +1,43 @@
+{% extends "productos/base.html" %}
+{% block title %} {% endblock %}
+{% block content %}
+{% load static %}
+<div class="container pt-5">
+    <h1 class="titulo pt-5 text-dark">Editar Productos</h1>
+</div>
+
+<!-- Contenido en tarjetas -->
+<div class="container">
+    <div class="row">
+        <button type="button">
+            <a href="{% url 'productosAdd' %}">Agregar Productos</a>
+        </button>
+        <div id="idMensajes">            
+            {% if mensaje %}
+                {{ mensaje }}
+            {% endif %}
+
+        </div>
+        <table class="titulo2" style="color: white; font-size: 16px; border:1px solid white;">
+            {% if productos %}
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Imagen</th>
+                <th>Eliminar</th>
+                <th>Modificar</th>
+                {% for producto in productos %}
+                <tr>
+                    <td>{{ producto.nombre }}</td>
+                    <td>{{ producto.precio }}</td>
+                    <td>{{ producto.categoria }}</td>
+                    <td>Imagen</td>
+                    <td><a href="">Eliminar</a></td>
+                    <td><a href="">Modificar</a></td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+        </table>
+    </div>
+</div>
+{% endblock %}

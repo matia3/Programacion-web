@@ -1,5 +1,5 @@
 {% extends "productos/base.html" %}
-{% block title %} {% endblock %}
+{% block title %}Editar Productos{% endblock %}
 {% block content %}
 {% load static %}
 <div class="container pt-5">
@@ -9,34 +9,37 @@
 <!-- Contenido en tarjetas -->
 <div class="container">
     <div class="row">
-        <button type="button">
-            <a href="{% url 'productosAdd' %}">Agregar Productos</a>
+        <button type="button" class="btn btn-primary mb-3">
+            <a href="{% url 'productosAdd' %}" style="color: white; text-decoration: none;">Agregar Productos</a>
         </button>
         <div id="idMensajes">            
             {% if mensaje %}
                 {{ mensaje }}
             {% endif %}
-
         </div>
-        <table class="titulo2" style="color: white; font-size: 16px; border:1px solid white;">
-            {% if productos %}
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Categoria</th>
-                <th>Imagen</th>
-                <th>Eliminar</th>
-                <th>Modificar</th>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                    <th>Imagen</th>
+                    <th>Eliminar</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
                 {% for producto in productos %}
                 <tr>
                     <td>{{ producto.nombre }}</td>
                     <td>{{ producto.precio }}</td>
                     <td>{{ producto.categoria }}</td>
-                    <td>Imagen</td>
-                    <td><a href="">Eliminar</a></td>
-                    <td><a href="">Modificar</a></td>
+                    <td><img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" style="max-width: 100px;"></td>
+                    <td><a href="{% url 'eliminar' producto.id %}" class="btn btn-danger">Eliminar</a></td>
+                    <td><a href="{% url 'editar' producto.id %}" class="btn btn-warning">Modificar</a></td>
                 </tr>
                 {% endfor %}
-                {% endif %}
+            </tbody>
         </table>
     </div>
 </div>

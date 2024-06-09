@@ -1,5 +1,5 @@
 {% extends "productos/base.html" %}
-{% block title %} {% endblock %}
+{% block title %}Agregar Producto{% endblock %}
 {% block content %}
 {% load static %}
 <div class="container pt-5">
@@ -10,14 +10,26 @@
 <div class="container">
     <div class="row">
         <h2 class="titulo pt-5 text-dark">Formulario</h2>
-        <form action="productosAdd">
+        <form action="{% url 'productosAdd' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
 
-            <pre>Nombre: <input type="text" name="nombre"></pre>
-            <pre>Precio: <input type="number" name="precio"></pre>
-            <pre>Categoria: <input type="text" name="categoria"></pre>
-            <pre>Imagen: <input type="file" name="imagen"></pre>
-            <input type="submit" name="opcion" value="">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio:</label>
+                <input type="number" class="form-control" id="precio" name="precio">
+            </div>
+            <div class="mb-3">
+                <label for="categoria" class="form-label">Categoría:</label>
+                <input type="text" class="form-control" id="categoria" name="categoria">
+            </div>
+            <div class="mb-3">
+                <label for="imagen" class="form-label">Imagen:</label>
+                <input type="file" class="form-control" id="imagen" name="imagen">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Producto</button>
         </form>
     </div>
 </div>

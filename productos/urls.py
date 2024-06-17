@@ -6,7 +6,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("", views.index, name='index'),
     path("productos/<str:categoria>", views.listar_productos, name='listar_productos'),
-    path("agregarproductos", views.agregar_productos, name='agregar_productos'),
     path("editar/<int:id>", views.editar_producto, name='editar'),
     path("eliminar/<int:id>", views.eliminar_producto, name='eliminar'),
     path("crud", views.crud, name="crud"),

@@ -1,0 +1,23 @@
+{% extends "productos/base.html" %}
+{% block title %}Log In{% endblock %}
+{% block content %}
+{% load static %}
+
+<!-- Jumbotron -->
+<div class="jumbotron pt-5">
+    <div class="container">
+        <b>
+            <h1 class="titulo2 display-4 pt-4">Registrarse</h1>
+        </b>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <form action="{% url 'registrarse' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+            <button type="submit" class="btn btn-success btn btn-block">Registrarse</button>
+    </form>
+</div>  
+
+{% endblock %}

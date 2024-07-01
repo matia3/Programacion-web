@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -10,4 +10,7 @@ urlpatterns = [
     path("eliminar/<int:id>", views.eliminar_producto, name='eliminar'),
     path("crud", views.crud, name="crud"),
     path("productosAdd", views.productosAdd, name="productosAdd"),
+    path("menu", views.menu, name="menu"),  
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("registration/", views.register_view, name="registrarse"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

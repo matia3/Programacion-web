@@ -17,3 +17,12 @@ class productosForm(forms.ModelForm):
             'imagen': forms.FileInput(attrs={'class': 'form-control'}),
             'categoria': forms.TextInput(attrs={'class': 'form-control'}),
         }
+
+
+class LoginForm(forms.Form):
+    username = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control titulo', 'placeholder': 'Username'})
+    )
+    password = forms.CharField(
+        widget=forms.PasswordInput(attrs={'class': 'form-control titulo', 'placeholder': 'Password'})
+    )

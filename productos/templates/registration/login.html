@@ -1,0 +1,28 @@
+{% extends "productos/base.html" %}
+{% block title %}Log In{% endblock %}
+{% block content %}
+{% load static %}
+
+  
+
+<!-- Jumbotron -->
+<div class="jumbotron pt-5">
+    <div class="container">
+        <b>
+            <h1 class="titulo2 display-4 pt-4">Log In</h1>
+        </b>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <form method="post" class="needs-validation" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn btn-block">Log In</button>
+            <a class="btn btn-success btn btn-block" href="{% url 'registrarse' %}" >Registrarse</a>
+        </div >
+    </form>
+</div>
+
+{% endblock %}

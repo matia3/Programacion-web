@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import productos
 from .forms import productosForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
 
 def index(request):
     context = {}
@@ -48,3 +50,18 @@ def productosAdd(request):
     else:
         form = productosForm()
     return render(request, 'crud/productos_add.html', {'form': form})
+
+def register_view(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("index")
+    else:
+            form = UserCreationForm()
+    return render(request, 'registration/registrarse.html', {"form": form })
+@login_required
+def menu(request):
+    usuario=request.session.get("usuario")
+    context ={"usuario":usuario}
+    return render(request, 'productos/index.html', context)

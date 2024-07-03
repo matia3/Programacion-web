@@ -84,11 +84,6 @@
                                 <a class="nav-link text-white" href="Nosotros.html">Nosotros</a>
                             </button>
                         </li>
-                        <li class="nav-item ">
-                            <button type="button" class="btn btn-coral">
-                                <a class="nav-link text-white" href="Envios.html">Envios</a>
-                            </button>
-                        </li>
                         <li class="nav-item mt-1">
                             <form class="d-flex ms-auto">
                                 <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -97,18 +92,25 @@
                             </form>
                         </li>
                         {% if user.is_authenticated %}
-                        <li class="nav-item mt-2">
+                            {% if user.is_staff %}
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-coral">
+                                    <a class="nav-link text-white" href="{% url 'crud' %}">Crud</a>
+                                </button>
+                            </li>
+                            {% endif %}
+                        <li class="nav-item">
                             <button type="button" class="btn btn-coral">
                                 <a class="nav-link text-white" href="">{{user.username}}</a>
                             </button>
                         </li>
-                        <li class="nav-item mt-2">
+                        <li class="nav-item">
                             <button type="button" class="btn btn-coral">
                                 <a class="nav-link text-white" href="{% url 'logout' %}">Cerrar sesion</a>
                             </button>
                         </li>
                         {% else %}
-                        <li class="nav-item mt-2">
+                        <li class="nav-item">
                             <button type="button" class="btn btn-coral">
                                 <a class="nav-link text-white" href="{% url 'login' %}">Login</a>
                             </button>

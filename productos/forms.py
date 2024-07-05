@@ -1,5 +1,5 @@
 from django import forms
-from .models import productos
+from .models import productos, CarritoItem
 
 class productosForm(forms.ModelForm):
     class Meta:
@@ -26,3 +26,11 @@ class LoginForm(forms.Form):
     password = forms.CharField(
         widget=forms.PasswordInput(attrs={'class': 'form-control titulo', 'placeholder': 'Password'})
     )
+
+class AddToCartForm(forms.ModelForm):
+    class Meta:
+        model = CarritoItem
+        fields = ['cantidad']
+        widgets = {
+            'cantidad': forms.NumberInput(attrs={'class': 'form-control', 'min': 1}),
+        }

@@ -9,9 +9,9 @@
 <!-- Contenido en tarjetas -->
 <div class="container">
     <div class="row">
-        <button type="button" class="btn btn-primary mb-3">
-            <a href="{% url 'productosAdd' %}" style="color: white; text-decoration: none;">Agregar Productos</a>
-        </button>
+        
+            <a href="{% url 'productosAdd' %}" style="color: white; text-decoration: none;" class="btn btn-primary mb-3"; >Agregar Productos</a>
+            
         <div id="idMensajes">            
             {% if mensaje %}
                 {{ mensaje }}
@@ -32,7 +32,7 @@
                 {% for producto in productos %}
                 <tr>
                     <td>{{ producto.nombre }}</td>
-                    <td>{{ producto.precio }}</td>
+                    <td>${{ producto.precio }}</td>
                     <td>{{ producto.categoria }}</td>
                     <td><img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" style="max-width: 100px;"></td>
                     <td><a href="{% url 'eliminar' producto.id %}" class="btn btn-danger">Eliminar</a></td>

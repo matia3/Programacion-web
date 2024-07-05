@@ -3,26 +3,27 @@
 {% block content %}
 {% load static %}
 
-  
-
 <!-- Jumbotron -->
 <div class="jumbotron pt-5">
-    <div class="container">
-        <b>
-            <h1 class="titulo2 display-4 pt-4">Log In</h1>
-        </b>
+    <div class="container text-center">
+        <h1 class="titulo2 display-4 pt-4"><b>Log In</b></h1>
     </div>
 </div>
 
 <div class="container mt-4">
-    <form method="post" class="needs-validation" novalidate>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary btn btn-block">Log In</button>
-            <a class="btn btn-success btn btn-block" href="{% url 'registrarse' %}" >Registrarse</a>
-        </div >
-    </form>
+    <div class="mx-auto p-4  border-dark rounded" style="max-width: 600px; background-color: rgb(216, 0, 143);">
+        <h2 class="text-center mb-4">Iniciar Sesión</h2>
+        <form method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                <a class="btn btn-success btn-block" href="{% url 'registrarse' %}">Registrarse</a>
+            </div>
+        </form>
+    </div>
 </div>
 
 {% endblock %}

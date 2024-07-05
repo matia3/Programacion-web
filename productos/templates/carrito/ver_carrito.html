@@ -1,0 +1,45 @@
+{% extends "productos/base.html" %}
+{% load cart_filters %}
+{% block title %}Mi Carrito{% endblock %}
+{% block content %}
+<div class="container pt-5">
+    <h1 class="titulo pt-5 text-dark">Mi Carrito</h1>
+    {% if carrito.items.all %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in carrito.items.all %}
+            <tr>
+                <td><img src="{{ item.producto.imagen.url }}" alt="{{ producto.nombre }}" style="max-width: 50px;"></td>
+                <td>{{ item.producto.nombre }}</td>
+                <td>
+                    <form action="{% url 'actualizar_carrito' item.id %}" method="post">
+                        {% csrf_token %}
+                        <input type="number" name="cantidad" value="{{ item.cantidad }}" min="1" class="form-control" style="width: 60px; display: inline;">
+                        <button type="submit" class="btn btn-primary btn-sm">Actualizar</button>
+                    </form>
+                </td>
+                <td>${{ item.producto.precio }}</td>
+                <td>${{ item.cantidad|multiply:item.producto.precio }}</td>
+                <td>
+                    <a href="{% url 'eliminar_del_carrito' item.id %}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3 class="titulo">Total: ${{ carrito.items.all|total_carrito }}</h3>
+    {% else %}
+    <p class="titulo">Tu carrito está vacío.</p>
+    {% endif %}
+</div>
+{% endblock %}

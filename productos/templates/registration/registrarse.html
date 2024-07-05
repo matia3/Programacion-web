@@ -5,19 +5,23 @@
 
 <!-- Jumbotron -->
 <div class="jumbotron pt-5">
-    <div class="container">
-        <b>
-            <h1 class="titulo2 display-4 pt-4">Registrarse</h1>
-        </b>
+    <div class="container text-center">
+        <h1 class="titulo2 display-4 pt-4"><b>Registrarse</b></h1>
     </div>
 </div>
 
 <div class="container mt-4">
-    <form action="{% url 'registrarse' %}" method="post">
-        {% csrf_token %}
-        {{ form }}
-            <button type="submit" class="btn btn-success btn btn-block">Registrarse</button>
-    </form>
-</div>  
+    <div class="mx-auto p-4  border-dark rounded" style="max-width: 830px; background-color: rgb(216, 0, 143); ">
+        <h2 class="text-center ">Crear cuenta</h2>
+        <form action="{% url 'registrarse' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Registrarse</button>
+            <a href="{% url 'login' %}" class="btn btn-danger">Volver</a>
+        </form>
+    </div>
+</div>
 
 {% endblock %}

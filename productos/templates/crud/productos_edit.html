@@ -23,7 +23,14 @@
             </div>
             <div class="mb-3">
                 <label for="categoria" class="form-label">Categoría:</label>
-                <input type="text" class="form-control" id="categoria" name="categoria" value="{{ producto.categoria }}">
+                <select class="form-select" id="categoria" name="categoria">
+                    <option value="" disabled>Seleccione una categoría</option>
+                    {% for categoria in categorias %}
+                        <option value="{{ categoria.0 }}" {% if producto.categoria == categoria.0 %}selected{% endif %}>
+                            {{ categoria.1 }}
+                        </option>
+                    {% endfor %}
+                </select>
             </div>
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>
             <a href="{% url 'crud' %}" class="btn btn-secondary">Cancelar</a>

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import productos, Carrito, CarritoItem
+from .models import productos, Carrito, CarritoItem, CATEGORIAS
 from .forms import productosForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
@@ -22,15 +22,17 @@ def listar_productos(request, categoria):
 
 
 def editar_producto(request, id):
+    
     producto = productos.objects.get(id=id)
     if request.method == 'POST':
         form = productosForm(request.POST, request.FILES, instance=producto)
         if form.is_valid():
             form.save()
             return redirect('crud')
+        
     else:
         form = productosForm(instance=producto)
-    return render(request, 'crud/productos_edit.html', {'form': form, 'producto': producto})
+    return render(request, 'crud/productos_edit.html', {'form': form, 'producto': producto, 'categorias': CATEGORIAS})
 
 
 def eliminar_producto(request, id):
@@ -53,7 +55,12 @@ def productosAdd(request):
             return redirect('crud')
     else:
         form = productosForm()
-    return render(request, 'crud/productos_add.html', {'form': form})
+
+    context = {
+        'form': form,
+        'categorias': CATEGORIAS
+    }
+    return render(request, 'crud/productos_add.html', context)
 
 def register_view(request):
     if request.method == "POST":

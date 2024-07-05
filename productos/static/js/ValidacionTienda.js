@@ -8,7 +8,8 @@ function validarTiendaAbierta() {
             const ahora = new Date();
             const diaActual = diasDeLaSemana[ahora.getDay() - 1];
             const horaActual = ahora.getHours() + ':' + ahora.getMinutes().toString().padStart(2, '0');
-
+            console.log('Dia actual:', diaActual);
+            console.log(ahora.getHours(), ahora.getMinutes());
             const horarioTienda = datos[0][diaActual];
             const horaApertura = horarioTienda.open;
             const horaCierre = horarioTienda.close;

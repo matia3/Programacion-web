@@ -1,23 +1,24 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# opciones de categorias
 CATEGORIAS = (
-        ('1', 'Procesadores'),
-        ('2', 'Placa Madre'),
-        ('3', 'Tarjetas Graficas'),
-        ('4', 'RAM'),
-        ('5', 'Fuentes de Poder'),
-        ('6', 'Almacenamiento'),
-        ('7', 'Gabinetes'),
-        ('8', 'Refrigeración'),
+    ('Procesadores', 'Procesadores'),
+    ('Placa Madre', 'Placa Madre'),
+    ('Tarjetas de Video', 'Tarjetas de Video'),
+    ('RAM', 'RAM'),
+    ('Fuentes de Poder', 'Fuentes de Poder'),
+    ('Almacenamiento', 'Almacenamiento'),
+    ('Gabinetes', 'Gabinetes'),
+    ('Refrigeración', 'Refrigeración'),
+    ('Notebooks', 'Notebooks'),
+    ('PC', 'PC'),
 )
 
 class productos(models.Model):
     nombre = models.CharField(max_length=255)
     precio = models.DecimalField(max_digits=10, decimal_places=0)
     imagen = models.ImageField(upload_to='productos/static/img/', null=True, blank=True)
-    categoria = models.CharField(max_length=255)
+    categoria = models.CharField(max_length=20, choices=CATEGORIAS)
 
     def __str__(self):
         return self.nombre

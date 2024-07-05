@@ -1,6 +1,18 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+# opciones de categorias
+CATEGORIAS = (
+        ('1', 'Procesadores'),
+        ('2', 'Placa Madre'),
+        ('3', 'Tarjetas Graficas'),
+        ('4', 'RAM'),
+        ('5', 'Fuentes de Poder'),
+        ('6', 'Almacenamiento'),
+        ('7', 'Gabinetes'),
+        ('8', 'Refrigeración'),
+)
+
 class productos(models.Model):
     nombre = models.CharField(max_length=255)
     precio = models.DecimalField(max_digits=10, decimal_places=0)
@@ -15,6 +27,7 @@ class Carrito(models.Model):
 
     def __str__(self):
         return f"Carrito de {self.usuario.username}"
+    
 
 class CarritoItem(models.Model):
     carrito = models.ForeignKey(Carrito, on_delete=models.CASCADE, related_name='items')

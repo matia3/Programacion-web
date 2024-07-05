@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="{% static 'js/ValidacionTienda.js' %}"></script>
+    <script>validarTiendaAbierta();</script>
+    
     <body style="background-image: url('{% static 'img/ye.gif' %}');">
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -80,10 +82,10 @@
                             </button>
                         </li>
                         <li class="nav-item ">
-                            <button type="button" class="btn btn-coral">
-                                <a class="nav-link text-white" href="Nosotros.html">Tienda</a>
+                            <button type="button" class="btn btn-coral" id="botonTienda">
+                                <a class="nav-link text-white" href="">Tienda</a>
                             </button>
-                        
+                        </li>
                         {% if user.is_authenticated %}
                             {% if user.is_staff %}
                             <li class="nav-item">

@@ -6,7 +6,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.decorators.http import require_POST
 
 def index(request):
-    context = {}
+    var_productos = productos.objects.all()
+    context = {
+         'productos': var_productos,
+    }
     return render(request, 'productos/index.html', context)
 
 def listar_productos(request, categoria):
